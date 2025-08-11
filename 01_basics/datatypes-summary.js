@@ -1,3 +1,6 @@
+//---------------------------javascript is dynamic type----------------------
+
+
 //primitive
 
 //7 types: String,Number,Boolean,null,undefined,Symbol is used to make the value unique,BigInt: toomuch big value can be handle 
@@ -69,4 +72,27 @@ const Myfunction=function(){
 
 //Can be slower in performance
 
-//---------------------------javascript is dynamic type----------------------
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//stack(Primitive), Heap(non-premitive)
+let mychannelname="ammarEnjoy"
+
+let anotherName=mychannelname;
+console.log(anotherName)
+
+anotherName="AnotherChannel";
+
+console.log(mychannelname);
+console.log(anotherName);
+
+let userone={
+    email:"ammar@123",
+    upi: "user123"
+}
+ let usertwo=userone;
+  
+ usertwo.email="Ammar145"; //here due to this is heap it gives orignal reference of variable and changed both
+ console.log(userone.email)
+ console.log(usertwo.email)
+//its mean in the stack it makes copy and in the heap it gaves reference that is orignal (not the copy) of that variable
+
