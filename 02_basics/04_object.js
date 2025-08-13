@@ -35,7 +35,7 @@ const source={b:4,c:5}
 
 const returnedTarget=Object.assign(target,source)
 
-console.log(target)//target get overwrited by source
+// console.log(target)//target get overwrited by source
 
 const users=[
     {
@@ -54,11 +54,43 @@ const users=[
 users[2].email
 console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));//to get the key in array form
-console.log(Object.values(tinderUser));//to get the value of key in array form
-console.log(Object.entries(tinderUser));//it gives keys and entries separately
+// console.log(Object.keys(tinderUser));//to get the key in array form
+// console.log(Object.values(tinderUser));//to get the value of key in array form
+// console.log(Object.entries(tinderUser));//it gives keys and entries separately
 
-console.log(tinderUser.hasOwnProperty('islogged')); //to check this property exists or not...it gives value in boolean
+// console.log(tinderUser.hasOwnProperty('islogged')); //to check this property exists or not...it gives value in boolean
+
+const course={
+    courseName: "js in urdu",
+    price: "999",
+    courseInstructor: "Ammar"
+}
+
+// console.log(course.courseInstructor);
+
+const {courseInstructor: instructor}=course
+
+// console.log(instructor);
+
+// const navbar=({company})=>{              //({company})  destructuring is happening here
+
+// }
+// navbar(company= "Ammar")
+ 
+
+//jason
+// {
+//     "name": "Ammar",
+//     "courseName":"js in urdu",
+//     "price": "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
+
 
 
 
