@@ -55,5 +55,7 @@ addother();
 const addotherz = (num1,num2) => ({username :'Ammar'});//use of brackets init here 
 console.log(addotherz(5,7));
 
+//ok
+
 
 
