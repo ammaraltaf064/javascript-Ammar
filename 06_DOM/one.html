@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body  class="bg-black" >
+    <div>
+        <h1 id="title" class="Heading">DOM learning on chai aur code <span style="display: none;">test text</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eveniet deserunt natus haru
+         cum fugit culpa labore, blanditiis numquam ipsum! Earum corrupti ea dolorum.</p>
+        <input type="password" name="" id="">
+        <ul>
+            <li class="list item">one</li>
+            <li class="list item">two</li>
+            <li class="list item">three</li>
+            <li class="list item">four</li>
+        </ul>
+        <!-- 
+
+                write this all on console screeen using inspect
+         console.log(document) 
+          console.log(document.baseURI) it gives he url of document and it is not arry
+          console.log(document.links) it gives all the links
+          console.log(document.links[2])//it goves second link 
+          document.getElementById('firstHeading')
+          document.getElementById('firstHeading').inner= <h1>AMmar<h1/>//it replaces
+            title.innerText //it didn't show the hide data 
+            title.textContent //show the hidden data
+document.getElementById('title')
+document.getElementById('title').id
+document.getElementById('title').className
+document.getElementById('title').getAttribute()
+document.getElementById('title').getAttribute('id')
+document.getElementById('title').getAttribute('class')
+document.getElementById('title').setAttribute('class','test')//class test ki ban jy gi
+document.getElementById('title').setAttribute('class','test Heading')//class test or heading ki bn jy gi lakin console tab pr
+document.getElementById('title')
+const title=document.getElementById('title')
+title
+     title.style.backgroundColor="green"
+    title.style.borderRadius="15px"
+     document.querySelector('h1')
+     document.querySelector('#title')
+     document.querySelector("input[type='password']")
+     document.querySelector('p:first-child')
+     document.querySelector('ul')
+      const myUl=document.querySelector('ul')
+      myUl.querySelector('li')
+      document.querySelectorAll('li')
+      const tempList=document.querySelectorAll('li')
+      tempList
+      document.querySelectorAll('li')
+      const tempList=document.querySelectorAll('li')
+      const myArr=[1,2,3,4]   //there is map init so this is array.. in the prototype
+        myArr
+        tempList.style.color='green' //nodelist hai isko ham green ni kr skty isko krny ka aik treeka hai wo ye hai
+        tempList[0].style.color='green'//aesay kr skty
+
+        
+        important 
+        //ham direct style nai deskty hamay is k liay forEach loop ya for loop lgana hoga style wgaira deny k liay
+
+        three methods to give style
+
+        1.
+        let items = document.querySelectorAll(".box");
+
+for (let i = 0; i < items.length; i++) {
+  items[i].style.color = "red";
+}
+
+
+2.
+let items = document.querySelectorAll(".box");
+
+items.forEach(function(item) {
+  item.style.color = "blue";
+}); 
+nodelist pr kaam kr rha 
+
+3.
+let items = document.querySelectorAll(".box");
+// Convert NodeList → Array
+let arr = Array.from(items);
+arr.map(item => {
+  item.style.color = "green";
+});
+(map +reduce+ filter)-> fulll access of array
+
+
+const myH1=document.querySelectorAll('h1')
+myH1
+document.getElementsByClassName('')
+const tempClass=document.getElementsByClassName('')
+tempClass
+//here map is not in the prototype so we convert into array so that there should be map
+Array.from(tempClass)
+const MYCONVERTEDArray=Array.from(tempClass)
+MYCONVERTEDArray
+MYCONVERTEDArray.forEach(function(li){li.style.color="orange"})
+
+-->
+    </div>
+    
+</body>
+</html>
