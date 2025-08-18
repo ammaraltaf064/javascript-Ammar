@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chai aur code</title>
+</head>
+<body style="background-color: black; color:white ">
+
+</body>
+
+<script>
+    const div= document.createElement('div')
+    console.log(div)                      //it create div element
+
+    div.className= "main"// to set class name i.e main
+    div.id="hello"// it set the id of name hello;
+    div.id=MAth.round(Math.random() *10 +1)
+    div.setAttribute("title","generated title")// title bnay ga jis mai likha hoga generated title
+    div.style.backgroundcolor="green"
+    div.style.padding="12px"
+    // div.innerText="chai aur code"//ye div k cenetr mai aajy ga i.e <div>CHai our code<div/>
+    //prefer this: 
+
+        const addText= document.createTextNode("chai aur code")
+        div.appendChild(addText); //yaha append ye hua hai k div k andr chai aur code text daal dia hai
+
+//main thing:
+
+        document.body.appendChild(div)  //body k andr child append ho jy ga like chai aur code body k andr likha jy ga
+        //or screen pr show hoga
+</script>
+</html>
