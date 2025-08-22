@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML elements</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // in javascript all events run sequentially
+    
+    //attachEvent() early time use hota thaa jb internet explorer ki mara mari hui krti thi
+    //jQuery .onevent listner likhty hain   jesy hm addeventlistner likhty thay
+    
+    // jo jo prhna hai
+    
+    //type  keyboard k type events mouse k type events , timestamp,defaultPrevented default jo kaam horha hota usko rook skty,
+    //target,toElement, sourceElement kaafi use hoga,
+    //clientX, clientY, screenX,screenY
+    //altkey,ctrlkey: kya ye ye press hui hai k ni,shiftkey,keyCode a key ka keycoder kya hai
+
+    // here onclick give less functions
+    // document.getElementById('owl').onclick=function(){
+    //     alert("owl clicked")
+    // }
+
+    //so we use another method that give  modern functions eventlistner
+
+//     document.getElementById("images").addEventListener('click',function(e){
+// alert("clicked inside the ul")
+
+// },false) //by default third parameter is false so no need to write it and this is defaultbubbling
+
+// //owl andr ki chz hai lakin inside to outside hoga
+//  //event propogation we called it bubbling yanii jis li pr click hua hai phly li ay ga kyu k wo inside hai phir outside ul pr jy ga 
+//  //inside to outside 
+//     document.getElementById("owl").addEventListener('click',function(e){
+// alert("clicked owl")
+// e.stopPropagation();//ab apka element upar k element tk ni jy ga yani wo ul ko print ni kry ga9
+//     },false) 
+
+
+
+// //     document.getElementById("images").addEventListener('click',function(e){
+// //         alert("clicked inside the ul")
+        
+// //     },true)
+// //     //owl andr ki chz hai lakin outside to inside hoga
+// //     // here we use true it means it is capturing mode is mai ul phly ay ga or li baad mai outside to inside
+
+// //     document.getElementById("owl").addEventListener('click',function(e){
+// // alert("clicked owl")
+
+// //     },true)
+
+//     document.getElementById("google").addEventListener('click',function(e){
+
+//         e.preventDefault();//stop default action for an event and it prevent a link from nevagating a new page
+//         e.stopPropagation();
+//         console.log("google clicked");
+        
+
+//     },false)
+
+document.querySelector("images").addEventListener('click',function(e){
+
+    console.log(e.target.tagName);//to get tagname like IMG
+    console.log(e.target.parentNode);//ye jis ko click kray ga usay target kray ga or jis ko target kia uska parentnode chahiye jo k li hai usko point kray ga..agr ham parent na use kry to wo bullet point chor de ga agr hm ne hide krni ho pic
+
+    if(e.target.tagName === "IMG"){
+        console.log(e.target.id);
+        
+     let removeit=e.target.parentNode
+     removeit.remove() //it remove the targeted pic
+   
+    }
+
+    //another way
+    // removeit.parentNode.removeChild(removeit)//ye phly parentdega jo k ul hai then li dega 
+
+    
+},false)
+
+
+</script>
+</html>
