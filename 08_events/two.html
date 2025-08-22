@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> CHAI AUR CODE</h1>
+    <button class="stop">STOP</button>
+</body>
+<script>
+    //previous information regarding Async was in phone SS
+
+// setTimeout() aik baar print krwa duga itny time baad 
+// setTimeout(function(){
+//     console.log("Ammar");
+    
+// },2000)
+
+
+ const timein= function(){
+    console.log("Ammar");
+    
+}
+setTimeout(timein,2000);
+
+const changeTEXT=function(){
+document.querySelector("h1").innerHTML="best js series"
+}
+ const ChangeMe= setTimeout(changeTEXT,2000);
+
+document.querySelector("#stop").addEventListener('click',function(){
+    clearTimeout(ChangeMe)//event ko honay se rokny k liay hm ne ye use kia
+    console.log("stoppoed");
+    
+})
+</script>
+</html>
